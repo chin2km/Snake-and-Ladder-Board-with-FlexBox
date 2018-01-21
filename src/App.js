@@ -19,6 +19,20 @@ class App extends Component {
     )(R.range(1,101));
   }
 
+  renderTips() {
+    return  <div className="tips">
+      <h3> Its Simple </h3>
+      <ul>
+        <li>Render boxes 1 to 100. 10 boxes in a row.</li>
+        <li>Color alternate box differently. css :nth-child(even)</li>
+        <li>Reverse even rows. flex-direction: row-reverse;</li>
+        <li>Flip the board. transform: scale(1, -1);</li>
+        <li>Flip the boxes. transform: scale(1, -1);</li>
+      </ul>
+      <h3> Thats it. </h3>
+    </div>;
+  }
+
   render() {
     return (
       <div className="App">
@@ -30,6 +44,7 @@ class App extends Component {
               {this.renderBoxes()}
           </div>
         </div>
+        {this.renderTips()}
       </div>
     );
   }
